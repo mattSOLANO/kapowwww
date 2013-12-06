@@ -9,11 +9,11 @@ else {
 }
 
 function kapow() {
-	$('body').on('mouseover', '*', function(){
-		$(this).css({'outline': '3px solid #d37820', 'cursor':'pointer'});
-	}).on("mouseout", '*', function(){
-		$(this).css('outline', 'none');
-	}).on('click', '*', function(){
+	$('body').on('mouseenter', '*', function(){
+		$(this).css({'outline': '3px solid #d37820', 'cursor':'pointer'}).addClass('kapow');
+	}).on("mouseleave", '*', function(){
+		$(this).css('outline', 'none').removeClass('kapow');
+	}).on('click', '.kapow', function(){
 		$(this).css({"display":"none"});
 	});
 }
