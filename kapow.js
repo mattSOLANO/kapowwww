@@ -1,6 +1,6 @@
 if (!($ = window.jQuery)) { // typeof jQuery=='undefined' works too
     script = document.createElement( 'script' );
-   script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js';
+   script.src = '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js';
     script.onload=kapow;
     document.body.appendChild(script);
 }
