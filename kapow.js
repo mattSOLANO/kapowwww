@@ -18,5 +18,6 @@ function kapow() {
 	}).on('click', '.kapow', function(event){
 		event.stopPropagation();
 		$(this).css({"display":"none"});
+		return false();
 	});
 }
