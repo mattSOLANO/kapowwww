@@ -9,11 +9,14 @@ else {
 }
 
 function kapow() {
-	$('body').on('mouseenter', '*', function(){
+	$('body').on('mouseenter', '*', function(event){
+		event.stopPropagation();
 		$(this).css({'outline': '3px solid #d37820', 'cursor':'pointer'}).addClass('kapow');
-	}).on("mouseleave", '*', function(){
+	}).on("mouseleave", '*', function(event){
+		event.stopPropagation();
 		$(this).css('outline', 'none').removeClass('kapow');
-	}).on('click', '.kapow', function(){
+	}).on('click', '.kapow', function(event){
+		event.stopPropagation();
 		$(this).css({"display":"none"});
 	});
 }
